@@ -10,12 +10,8 @@ import {
   Hero,
   SEO,
 } from "../components";
-import { WordPressBlocksViewer } from "@faustwp/blocks";
-import components from "../wp-blocks";
 
-export default function Component(props) {
-  console.log(props);
-
+export default function Component() {
   const { data } = useQuery(Component.query, {
     variables: Component.variables(),
   });
