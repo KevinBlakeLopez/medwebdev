@@ -12,7 +12,13 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <FaustProvider pageProps={pageProps}>
-      <Component {...pageProps} key={router.asPath} />
+      <WordPressBlocksProvider
+        config={{
+          blocks,
+        }}
+      >
+        <Component {...pageProps} key={router.asPath} />
+      </WordPressBlocksProvider>
     </FaustProvider>
   );
 }

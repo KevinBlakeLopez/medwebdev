@@ -15,10 +15,9 @@ import {
 import { WordPressBlocksViewer } from "@faustwp/blocks";
 import components from "../wp-blocks";
 
-const { contentBlocks } = props.data.post;
-const blocks = flatListToHierarchical(contentBlocks);
-
 export default function Component(props) {
+  const { contentBlocks } = props.data.post;
+  const blocks = flatListToHierarchical(contentBlocks);
   // Loading state for previews
   if (props.loading) {
     return <>Loading...</>;
