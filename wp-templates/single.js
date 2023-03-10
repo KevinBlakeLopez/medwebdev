@@ -20,7 +20,7 @@ export default function Component(props) {
   const blocks = flatListToHierarchical(contentBlocks);
   // Loading state for previews
   if (props.loading) {
-    return <>Loading... yeah</>;
+    return <>Loading... yeah hello</>;
   }
 
   const { title: siteTitle, description: siteDescription } =
