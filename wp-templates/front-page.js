@@ -1,6 +1,6 @@
-import { useQuery, gql } from '@apollo/client';
-import * as MENUS from '../constants/menus';
-import { BlogInfoFragment } from '../fragments/GeneralSettings';
+import { useQuery, gql } from "@apollo/client";
+import * as MENUS from "../constants/menus";
+import { BlogInfoFragment } from "../fragments/GeneralSettings";
 import {
   Header,
   Footer,
@@ -9,7 +9,12 @@ import {
   NavigationMenu,
   Hero,
   SEO,
-} from '../components';
+} from "../components";
+import { WordPressBlocksViewer } from "@faustwp/blocks";
+import components from "../wp-blocks";
+
+const { contentBlocks } = props.data.post;
+const blocks = flatListToHierarchical(contentBlocks);
 
 export default function Component() {
   const { data } = useQuery(Component.query, {
@@ -31,7 +36,7 @@ export default function Component() {
       />
       <Main>
         <Container>
-          <Hero title={'Front Page'} />
+          <Hero title={"Front Page"} />
           <div className="text-center">
             <p>This page is utilizing the "front-page" WordPress template.</p>
             <code>wp-templates/front-page.js</code>

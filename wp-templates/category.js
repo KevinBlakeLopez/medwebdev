@@ -1,6 +1,6 @@
-import { gql } from '@apollo/client';
-import * as MENUS from '../constants/menus';
-import { BlogInfoFragment } from '../fragments/GeneralSettings';
+import { gql } from "@apollo/client";
+import * as MENUS from "../constants/menus";
+import { BlogInfoFragment } from "../fragments/GeneralSettings";
 import {
   Header,
   Footer,
@@ -11,7 +11,12 @@ import {
   Post,
   FeaturedImage,
   SEO,
-} from '../components';
+} from "../components";
+import { WordPressBlocksViewer } from "@faustwp/blocks";
+import components from "../wp-blocks";
+
+const { contentBlocks } = props.data.post;
+const blocks = flatListToHierarchical(contentBlocks);
 
 export default function Component(props) {
   const { title: siteTitle, description: siteDescription } =
