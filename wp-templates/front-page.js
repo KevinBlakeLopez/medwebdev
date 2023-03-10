@@ -14,8 +14,8 @@ import { WordPressBlocksViewer } from "@faustwp/blocks";
 import components from "../wp-blocks";
 
 export default function Component(props) {
-  const { contentBlocks } = props.data.post;
-  const blocks = flatListToHierarchical(contentBlocks);
+  console.log(props);
+
   const { data } = useQuery(Component.query, {
     variables: Component.variables(),
   });
