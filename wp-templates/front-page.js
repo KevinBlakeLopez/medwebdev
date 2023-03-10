@@ -36,10 +36,9 @@ export default function Component() {
       />
       <Main>
         <Container>
-          <Hero title={"Front Page"} />
+          <Hero title={"Med Web Dev"} />
           <div className="text-center">
-            <p>This page is utilizing the "front-page" WordPress template.</p>
-            <code>wp-templates/front-page.js</code>
+            <p>Your medical web dev wizards at your service!</p>
           </div>
         </Container>
       </Main>
