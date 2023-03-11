@@ -16,8 +16,8 @@ import { WordPressBlocksViewer } from "@faustwp/blocks";
 import components from "../wp-blocks";
 
 export default function Component(props) {
-  const { contentBlocks } = props.data.post;
-  const blocks = flatListToHierarchical(contentBlocks);
+  // const { contentBlocks } = props.data.post;
+  // const blocks = flatListToHierarchical(contentBlocks);
   const { title: siteTitle, description: siteDescription } =
     props?.data?.generalSettings;
   const primaryMenu = props?.data?.headerMenuItems?.nodes ?? [];
